@@ -28,4 +28,5 @@ public class Executor {
 		contactService.createPerson(contact, sc);
 		System.out.println(contact);
 	}
+	
 }

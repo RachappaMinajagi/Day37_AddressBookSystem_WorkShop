@@ -38,7 +38,7 @@ public class ValidatorTest {
 	}
 
 	@Test
-	public void addressTest() throws AddressValidationException {
+	public void addressTest() throws AddressValidationException { 
 		Validator contact = new Validator();
 		boolean result = contact.validateAddress("Basav Nagar");
 		Assert.assertTrue(true);
