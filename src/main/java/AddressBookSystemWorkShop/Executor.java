@@ -6,6 +6,8 @@ package AddressBookSystemWorkShop;
 * UC2 :- Ability to add a new Contact to Address Book
 * UC3 :- Ability to edit existing contact person using their name
 * UC4 :- Ability to delete a person using person name
+* UC5 :- Ability to add Multiple AddressBook Person
+* UC6 :- Ability to add Multiple AddressBook Reactor each address book has unique Name
 */
 
 /**
@@ -61,7 +63,7 @@ public class Executor {
     * create a method  delete Contact
     */
    public static void deleteContact() {
-       
+        
        System.out.println("Enter Person Name");
        String name = sc.nextLine();
        
@@ -73,6 +75,19 @@ public class Executor {
        
        System.out.println("Person Not Found");
    }
+   
+   public static void addNewAddressBook(AddressBook addressBooks, AddressBook addressBookService, Scanner sc) {
+		System.out.print("Enter Name:");
+		String name;
+		name = sc.nextLine();
+		if (addressBooks.searchAddressBook(name) != null) {
+			System.out.println("Already exist");
+			return;
+		}
+		AddressBook addressBook = new AddressBook();
+		addressBooks.searchAddressBook(addressBook);
+		System.out.print("Added new Address Book\n");
+	}
 
     
    public static void createContact() {
@@ -136,7 +151,7 @@ public class Executor {
                case 6:
                    
                    repeat = false;
-                   System.out.println("Exit");
+                   System.out.println("Exit"); 
                    break;
                
                default:

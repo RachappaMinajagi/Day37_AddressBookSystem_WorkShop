@@ -72,4 +72,19 @@ public class AddressBook {
 			return "\nNo contact found";
 		return str.toString();
 	}
+
+	public Object searchAddressBook(String name) {
+		
+		return null;
+	}
+
+	public void searchAddressBook1(AddressBook addressBook) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void searchAddressBook(AddressBook addressBook) {
+		// TODO Auto-generated method stub
+		
+	}
 }
