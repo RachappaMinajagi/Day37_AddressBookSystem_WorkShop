@@ -21,13 +21,13 @@ public class AddressBook {
 		return addressList;
 	}
 
-	public void addContact(Contact contact) {
+	public void addContact(Object object) {
 
-		addressList.add(contact);
+		addressList.add((Contact) object);
 	}
 
 	public Contact searchByName(String name) {
-		for (int i = 0; i < addressList.size(); ++i) {
+		for (int i = 0; i < addressList.size(); ++i) { 
 			if (addressList.get(i).getName().contains(name))
 				/**
 				 * calling get method from addressList object

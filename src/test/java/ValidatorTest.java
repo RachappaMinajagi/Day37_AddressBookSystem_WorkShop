@@ -29,7 +29,7 @@ public class ValidatorTest {
 		boolean result = contact.validateEmail("rachoti@gmail.com");
 		Assert.assertTrue(true);
 	}
-
+ 
 	@Test
 	public void phoneNoTest() throws PhoneNumberValidationException {
 		Validator contact = new Validator();
