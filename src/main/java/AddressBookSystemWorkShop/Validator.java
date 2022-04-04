@@ -5,13 +5,13 @@ package AddressBookSystemWorkShop;
  */
 import java.util.regex.Pattern;
 
-/** 
+/**
  * Create String pattern Rejex namePattern, addressPattern, zipPattern,
  * emailPattern, phoneNumberPattern.
  * 
  * @author Rachoti
  *
- */ 
+ */
 public class Validator {
 	private String namePattern = "^[A-Z]{1}[A-Za-z]{2,}";
 	private String addressPattern = "^[a-zA-Z0-9-, ]+";

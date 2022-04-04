@@ -1,5 +1,9 @@
 package AddressBookSystemWorkShop;
 
+import java.security.Permission;
+import java.util.Collection;
+import java.util.List;
+
 /**
 * UC1 :- Ability to create a Contacts in Address Book with first and last names, address,
 *        city, state, zip, phone number and email
@@ -9,6 +13,7 @@ package AddressBookSystemWorkShop;
 * UC5 :- Ability to add Multiple AddressBook Person
 * UC6 :- Ability to add Multiple AddressBook Refactor each address book has unique Name
 * UC7 :- Ability to ensure there is no Duplicate Entry of the same Person in a particular Address Book
+* UC8:-Ability to search Person in a City or State across the multiple AddressBook
 */
 
 /**
@@ -16,6 +21,7 @@ package AddressBookSystemWorkShop;
 */
 import java.util.Objects;
 import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  * create a class name as AddressBookMain
@@ -99,7 +105,7 @@ public class Executor {
 		System.out.print("Enter Name:");
 		String name;
 		name = sc.nextLine();
-		if (addressBooks.searchAddressBook(name) != null) {
+		if (addressBooks.searchAddressBook(name) != null)  {
 			System.out.println("Already exist");
 			return;
 		}
@@ -111,6 +117,13 @@ public class Executor {
 	public static void createContact() {
 
 		addressBook.addContact(contactService.createContact());
+	}
+	
+	public void searchPersonInCityOrState(String city, String state) {
+		Object adressBook = null;
+		List<Permission> seachPerson = ((Collection<Permission>) adressBook).stream().filter(person -> person.getClass().equals(city))
+				.filter(person -> person.getName().equals(state)).collect(Collectors.toList());
+		System.out.println("After searching person in a city or state is:" + seachPerson);
 	}
 
 	public static void main(String[] args) {
