@@ -11,7 +11,21 @@ public class Contact {
 	private String email;
 
 	public Contact() {
-	} 
+
+	}
+
+	/**
+	 * Create Constructor and passing parameters
+	 * 
+	 * @param firstName
+	 * @param lastName
+	 * @param address
+	 * @param city
+	 * @param state
+	 * @param zip
+	 * @param phoneNumber
+	 * @param email
+	 */
 
 	public Contact(String firstName, String lastName, String address, String city, String state, String zip,
 			String phoneNumber, String email) {

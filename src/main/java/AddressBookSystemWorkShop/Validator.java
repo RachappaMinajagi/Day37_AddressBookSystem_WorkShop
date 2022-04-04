@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
  * Create String pattern Rejex namePattern, addressPattern, zipPattern,
  * emailPattern, phoneNumberPattern.
  * 
- * @author Rachoti
+ * @author Rachoti 
  *
  */
 public class Validator {

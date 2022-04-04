@@ -106,7 +106,7 @@ public class ContactService {
 			try {
 				phoneNumber = sc.nextLine();
 				validator.validatePhoneNumber(phoneNumber);
-				contact.setPhoneNumber(phoneNumber);
+				contact.setPhoneNumber(phoneNumber); 
 				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
@@ -203,7 +203,7 @@ public class ContactService {
 	}
 
 	public Object createContact() {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 }

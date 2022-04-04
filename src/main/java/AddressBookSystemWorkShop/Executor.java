@@ -13,7 +13,9 @@ import java.util.List;
 * UC5 :- Ability to add Multiple AddressBook Person
 * UC6 :- Ability to add Multiple AddressBook Refactor each address book has unique Name
 * UC7 :- Ability to ensure there is no Duplicate Entry of the same Person in a particular Address Book
-* UC8:-Ability to search Person in a City or State across the multiple AddressBook
+* UC8 :- Ability to search Person in a City or State across the multiple AddressBook
+* UC9 :- Ability to view by the Person View City or State maintain the Directory City of the Person
+* UC10 :- Ability to get number of contact persons i.e. count by City or State
 */
 
 /**
@@ -121,6 +123,7 @@ public class Executor {
 	
 	public void searchPersonInCityOrState(String city, String state) {
 		Object adressBook = null;
+		@SuppressWarnings({ "unchecked", "null" })
 		List<Permission> seachPerson = ((Collection<Permission>) adressBook).stream().filter(person -> person.getClass().equals(city))
 				.filter(person -> person.getName().equals(state)).collect(Collectors.toList());
 		System.out.println("After searching person in a city or state is:" + seachPerson);
