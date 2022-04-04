@@ -27,7 +27,7 @@ public class AddressBook {
 	}
 
 	public Contact searchByName(String name) {
-		for (int i = 0; i < addressList.size(); ++i) { 
+		for (int i = 0; i < addressList.size(); ++i) {
 			if (addressList.get(i).getName().contains(name))
 				/**
 				 * calling get method from addressList object
@@ -73,18 +73,20 @@ public class AddressBook {
 		return str.toString();
 	}
 
-	public Object searchAddressBook(String name) {
-		
+	public AddressBook searchAddressBook(String name) {
+
 		return null;
 	}
 
 	public void searchAddressBook1(AddressBook addressBook) {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	public void searchAddressBook(AddressBook addressBook) {
-		// TODO Auto-generated method stub
-		
+
+	}
+
+	public void addressBookOptions(AddressBook addressBook) {
+
 	}
 }

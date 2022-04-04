@@ -1,10 +1,13 @@
 package AddressBookSystemWorkShop;
+
 /**
  * import java.util.Scanner;
  */
 import java.util.Scanner;
+
 /**
  * Create Class ContactService
+ * 
  * @author Rachoti
  *
  */
@@ -13,16 +16,20 @@ public class ContactService {
 	public static final String DB_IO = null;
 	private Scanner sc;
 	private Validator validator;
+
 	/**
 	 * Create Constructor passing Scanner sc
+	 * 
 	 * @param sc
 	 */
-	public ContactService(Scanner sc ) {
-		this.sc= sc;
+	public ContactService(Scanner sc) {
+		this.sc = sc;
 		this.validator = new Validator();
 	}
+
 	/**
 	 * create method createPerson passing parameter
+	 * 
 	 * @param contact
 	 * @param sc
 	 */
@@ -30,10 +37,11 @@ public class ContactService {
 		String firstName, lastName, address, city, state, zip, email, phoneNumber;
 		System.out.println("first name:");
 		while (true) {
-			try { 
+			try {
 				firstName = sc.nextLine();
 				validator.validateFirstName(firstName);
-				contact.setFirstName(firstName); break;
+				contact.setFirstName(firstName);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -43,17 +51,19 @@ public class ContactService {
 			try {
 				lastName = sc.nextLine();
 				validator.validateLastName(lastName);
-				contact.setLastName(lastName); break;
+				contact.setLastName(lastName);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
-			} 
+			}
 		}
 		System.out.println("address:");
 		while (true) {
 			try {
 				address = sc.nextLine();
 				validator.validateAddress(address);
-				contact.setAddress(address); break;
+				contact.setAddress(address);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -63,7 +73,8 @@ public class ContactService {
 			try {
 				city = sc.nextLine();
 				validator.validateCity(city);
-				contact.setCity(city); break;
+				contact.setCity(city);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -73,7 +84,8 @@ public class ContactService {
 			try {
 				state = sc.nextLine();
 				validator.validateState(state);
-				contact.setState(state); break;
+				contact.setState(state);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -83,7 +95,8 @@ public class ContactService {
 			try {
 				zip = sc.nextLine();
 				validator.validateZip(zip);
-				contact.setZip(zip); break;
+				contact.setZip(zip);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -93,7 +106,8 @@ public class ContactService {
 			try {
 				phoneNumber = sc.nextLine();
 				validator.validatePhoneNumber(phoneNumber);
-				contact.setPhoneNumber(phoneNumber); break;
+				contact.setPhoneNumber(phoneNumber);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -103,7 +117,8 @@ public class ContactService {
 			try {
 				email = sc.nextLine();
 				validator.validateEmail(email);
-				contact.setEmail(email); break;
+				contact.setEmail(email);
+				break;
 			} catch (Exception e) {
 				System.out.println(e.getMessage());
 			}
@@ -118,8 +133,7 @@ public class ContactService {
 					"1 (FirstName)\n2 (LastName)\n3 (Address)\n4 (City)\n5 (State)\n6 (Zip)\n7 (Phone)\n8 (Email)\n9 (Exit)");
 			int options = Integer.parseInt(sc.nextLine());
 			/**
-			 * Switch case Statements
-			 * it will the display the Person Contact details 
+			 * Switch case Statements it will the display the Person Contact details
 			 */
 			switch (options) {
 			/**
@@ -174,10 +188,12 @@ public class ContactService {
 			}
 		}
 	}
-/**
- * create method DisplayContact
- * @param contact
- */
+
+	/**
+	 * create method DisplayContact
+	 * 
+	 * @param contact
+	 */
 	public void displayContact(Contact contact) {
 		if (contact == null) {
 			System.out.println("Contact not found");

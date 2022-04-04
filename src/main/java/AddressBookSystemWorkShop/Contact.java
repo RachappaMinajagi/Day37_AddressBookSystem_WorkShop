@@ -1,4 +1,5 @@
 package AddressBookSystemWorkShop;
+
 public class Contact {
 	private String firstName;
 	private String lastName;
@@ -76,7 +77,7 @@ public class Contact {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getPhoneNumber() { 
+	public String getPhoneNumber() {
 		return phoneNumber;
 	}
 
